@@ -1,0 +1,23 @@
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.username, user %></td>
+        <td><%= user.gender %></td>
+        <td><%= user.age %></td>
+        <td><%= l user.created_at, format: :short %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

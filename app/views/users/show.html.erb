@@ -1,0 +1,19 @@
+<h1>User</h1>
+<table>
+  <tbody>
+    <tr><td>Username</td>                 <td><%= @user.username %></td></tr>
+    <tr><td>Gender</td>                   <td><%= @user.gender %></td></tr>
+    <tr><td>Age</td>                      <td><%= @user.age %></td></tr>
+    <tr><td>Created At</td>               <td><%= l @user.created_at, format: :short %></td></tr>
+    <tr><td>HR Zone1 BPM Min</td>         <td><%= @user.hr_zone1_bpm_min %></td></tr>
+    <tr><td>HR Zone1 BPM Max</td>         <td><%= @user.hr_zone1_bpm_max %></td></tr>
+    <tr><td>HR Zone2 BPM Min</td>         <td><%= @user.hr_zone2_bpm_min %></td></tr>
+    <tr><td>HR Zone2 BPM Max</td>         <td><%= @user.hr_zone2_bpm_max %></td></tr>
+    <tr><td>HR Zone3 BPM Min</td>         <td><%= @user.hr_zone3_bpm_min %></td></tr>
+    <tr><td>HR Zone3 BPM Max</td>         <td><%= @user.hr_zone3_bpm_max %></td></tr>
+    <tr><td>HR Zone4 BPM Min</td>         <td><%= @user.hr_zone4_bpm_min %></td></tr>
+    <tr><td>HR Zone4 BPM Max</td>         <td><%= @user.hr_zone4_bpm_max %></td></tr>
+  </tbody>
+</table>
+ 
+<%= link_to 'Back', users_path %>
