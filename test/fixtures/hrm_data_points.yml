@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hrm_session_id: 
+  bpm: 1
+  started_at: 2013-07-15 16:08:18
+  ended_at: 2013-07-15 16:08:18
+  duration: 1
+
+two:
+  hrm_session_id: 
+  bpm: 1
+  started_at: 2013-07-15 16:08:18
+  ended_at: 2013-07-15 16:08:18
+  duration: 1

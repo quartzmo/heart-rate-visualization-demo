@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  username: MyString
+  gender: MyString
+  age: 1
+  hr_zone1_bpm_min: 1
+  hr_zone1_bpm_max: 1
+  hr_zone2_bpm_min: 1
+  hr_zone2_bpm_max: 1
+  hr_zone3_bpm_min: 1
+  hr_zone3_bpm_max: 1
+  hr_zone4_bpm_min: 1
+  hr_zone4_bpm_max: 1
+
+two:
+  username: MyString
+  gender: MyString
+  age: 1
+  hr_zone1_bpm_min: 1
+  hr_zone1_bpm_max: 1
+  hr_zone2_bpm_min: 1
+  hr_zone2_bpm_max: 1
+  hr_zone3_bpm_min: 1
+  hr_zone3_bpm_max: 1
+  hr_zone4_bpm_min: 1
+  hr_zone4_bpm_max: 1
