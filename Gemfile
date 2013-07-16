@@ -32,6 +32,8 @@ gem 'twitter-bootstrap-rails', '~> 2.2.7'
 gem 'will_paginate', '~> 3.0.4'
 gem 'will_paginate-bootstrap', '~> 0.2.3'
 
+gem 'highcharts-rails', '~> 3.0.2'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
