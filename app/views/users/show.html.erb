@@ -7,6 +7,10 @@
 
   <h1><%= @user.username %></h1>
 </div>
+<div class="well">
+  <%= link_to "View Sessions", user_hrm_sessions_path(@user), class: "btn" %>
+</div>
+
 
 <table class="table table-bordered">
   <tbody>
@@ -25,4 +29,3 @@
   </tbody>
 </table>
 
-<%= link_to "Sessions", user_hrm_sessions_path(@user) %>

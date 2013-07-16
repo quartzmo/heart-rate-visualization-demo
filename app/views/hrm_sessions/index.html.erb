@@ -13,7 +13,14 @@
   <thead>
     <tr>
       <th>Date</th>
-      <th>Duration</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Avg</th>
+      <th>Zone 1</th>
+      <th>Zone 2</th>
+      <th>Zone 3</th>
+      <th>Zone 4</th>
+      <th>Total duration</th>
     </tr>
   </thead>
 
@@ -21,11 +28,15 @@
     <% @hrm_sessions.each do |hrm_session| %>
       <tr>
         <td><%= link_to l(hrm_session.created_at, format: :long), [@user, hrm_session] %></td>
+        <td><%= hrm_session.bpm_min if hrm_session.bpm_min %></td>
+        <td><%= hrm_session.bpm_max if hrm_session.bpm_max %></td>
+        <td><%= hrm_session.bpm_weighted_avg if hrm_session.bpm_weighted_avg %></td>
+        <td><%= seconds_to_human_time hrm_session.hr_zone1_duration if hrm_session.hr_zone1_duration %></td>
+        <td><%= seconds_to_human_time hrm_session.hr_zone2_duration if hrm_session.hr_zone2_duration %></td>
+        <td><%= seconds_to_human_time hrm_session.hr_zone3_duration if hrm_session.hr_zone3_duration %></td>
+        <td><%= seconds_to_human_time hrm_session.hr_zone4_duration if hrm_session.hr_zone4_duration %></td>
         <td><%= seconds_to_human_time hrm_session.duration %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-
-<%= will_paginate @hrm_sessions, renderer: BootstrapPagination::Rails %>

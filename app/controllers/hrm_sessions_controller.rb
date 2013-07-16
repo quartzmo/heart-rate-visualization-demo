@@ -3,7 +3,7 @@ class HrmSessionsController < ApplicationController
   before_action :set_user
 
   def index
-    @hrm_sessions = @user.hrm_sessions.paginate(page: params[:page])
+    @hrm_sessions = @user.hrm_sessions
   end
 
   def show

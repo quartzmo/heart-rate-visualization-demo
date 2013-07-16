@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130715220818) do
+ActiveRecord::Schema.define(version: 20130716195213) do
 
   create_table "hrm_data_points", force: true do |t|
     t.integer  "hrm_session_id"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20130715220818) do
     t.integer  "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "bpm_max"
+    t.integer  "bpm_min"
+    t.integer  "bpm_weighted_avg"
+    t.integer  "hr_zone1_duration"
+    t.integer  "hr_zone2_duration"
+    t.integer  "hr_zone3_duration"
+    t.integer  "hr_zone4_duration"
   end
 
   add_index "hrm_sessions", ["user_id"], name: "index_hrm_sessions_on_user_id", using: :btree
