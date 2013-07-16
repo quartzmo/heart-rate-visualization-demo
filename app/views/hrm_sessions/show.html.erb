@@ -12,8 +12,6 @@
   <h5><%= seconds_to_human_time @hrm_session.duration %></h5>
 </div>
 
-<div id="highcharts-container" style="width:100%; height:400px;"></div>
-
-<script>
-
-</script>
+<%= content_tag "div", id: "hrm-data-points-chart", class: "chart-container", data: {hrm_data_points: @hrm_session.hrm_data_points.inject([]){|memo, x| memo << [x.started_at, x.bpm] ; memo} } do %>
+  Loading...
+<% end %>
