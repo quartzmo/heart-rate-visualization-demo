@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.order(:id).limit(10)
+    @users = User.order(:id).paginate(:page => params[:page])
   end
 
   def show
