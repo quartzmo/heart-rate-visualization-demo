@@ -1,4 +1,13 @@
-<h1>User</h1>
+<div class="page-header">
+
+  <ul class="breadcrumb">
+    <li><%= link_to "Users", users_path %> <span class="divider">/</span></li>
+    <li class="active">User</li>
+  </ul>
+
+  <h1><%= @user.username %></h1>
+</div>
+
 <table class="table table-bordered">
   <tbody>
     <tr><td>Username</td>                 <td><%= @user.username %></td></tr>
@@ -15,5 +24,5 @@
     <tr><td>HR Zone4 BPM Max</td>         <td><%= @user.hr_zone4_bpm_max %></td></tr>
   </tbody>
 </table>
- 
-<%= link_to 'Back', users_path %>
+
+<%= link_to "Sessions", user_hrm_sessions_path(@user) %>

@@ -1,5 +1,9 @@
 HeartRateVisualizationDemo::Application.routes.draw do
-  resources :users, only: [:index, :show]
+
+  get "hrm_sessions/show"
+  resources :users, only: [:index, :show] do
+    resources :hrm_sessions, only: [:index, :show]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

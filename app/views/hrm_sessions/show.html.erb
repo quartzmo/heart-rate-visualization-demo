@@ -1,0 +1,13 @@
+<div class="page-header">
+
+  <ul class="breadcrumb">
+    <li><%= link_to "Users", users_path %> <span class="divider">/</span></li>
+    <li><%= link_to "User", user_path(@user) %> <span class="divider">/</span></li>
+    <li><%= link_to "Sessions", user_hrm_sessions_path(@user) %> <span class="divider">/</span></li>
+    <li class="active">Session</li>
+  </ul>
+
+  <h1>Session for <%= @user.username %></h1>
+  <h3><%= l @hrm_session.created_at, format: :long %></h3>
+  <h5><%= seconds_to_human_time @hrm_session.duration %></h5>
+</div>

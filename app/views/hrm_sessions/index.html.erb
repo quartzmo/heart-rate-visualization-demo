@@ -1,0 +1,31 @@
+<div class="page-header">
+
+  <ul class="breadcrumb">
+    <li><%= link_to "Users", users_path %> <span class="divider">/</span></li>
+    <li><%= link_to "User", user_path(@user) %> <span class="divider">/</span></li>
+    <li class="active">Sessions</li>
+  </ul>
+
+  <h1>Sessions for <%= @user.username %></h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hrm_sessions.each do |hrm_session| %>
+      <tr>
+        <td><%= link_to l(hrm_session.created_at, format: :long), [@user, hrm_session] %></td>
+        <td><%= seconds_to_human_time hrm_session.duration %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= will_paginate @hrm_sessions, renderer: BootstrapPagination::Rails %>

@@ -10,4 +10,5 @@ A data visualization app created for a job interview problem, using Rails 4.0.0,
 1. `rails g model HrmSession user:references duration:integer`
 1. `rails g model HrmDataPoint hrm_session:references bpm:integer started_at:timestamp ended_at:timestamp duration:integer`
 1. `rails g controller users index`
+1. `rails g controller hrm_sessions show`
 
