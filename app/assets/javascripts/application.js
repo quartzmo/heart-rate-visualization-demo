@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require highcharts
 //= require turbolinks
-//= require hrm_sessions
+//= require jquery.turbolinks
+//= require hrm_data_points
